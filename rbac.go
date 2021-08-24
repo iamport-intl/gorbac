@@ -48,6 +48,17 @@ func New() *RBAC {
 	}
 }
 
+// Roles returns all roles into a slice.
+func (rbac *RBAC) Roles() ([]string, Roles) {
+	rbac.mutex.Lock()
+	result := make([]string, 0, len(rbac.roles))
+	for r, _ := range rbac.roles {
+		result = append(result, r)
+	}
+	rbac.mutex.Unlock()
+	return result, rbac.roles
+}
+
 // SetParents bind `parents` to the role `id`.
 // If the role or any of parents is not existing,
 // an error will be returned.
