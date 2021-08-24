@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/mikespook/gorbac"
+	"github.com/iamport-intl/gorbac"
 )
 
 type myRole struct {

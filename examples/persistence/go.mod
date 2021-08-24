@@ -2,4 +2,5 @@ module examples/persistence
 
 go 1.16
 
-require github.com/mikespook/gorbac v2.1.0+incompatible
+require github.com/iamport-intl/gorbac v2.2.1+incompatible
+
